@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Drawable xml control image's dimensions-->
+    <dimen name="common_h">30dp</dimen>
+    <dimen name="add_edit_w">45dp</dimen>
+    <dimen name="modify_w">75dp</dimen>
+    <dimen name="sale_w">60dp</dimen>
+    <dimen name="x_plus_minus_h_w">25dp</dimen>
+
+    <dimen name="main_header_padding_margin">24dp</dimen>
+    <dimen name="main_header_textsize">20sp</dimen>
+
+    <dimen name="baseMarginPaddigng">8dp</dimen>
+
+    <dimen name="plus_minus_gep">16dp</dimen>
+
+    <dimen name="phone_number_padding">4dp</dimen>
+
+    <dimen name="product_item_producName_TextSize">22sp</dimen>
+    <dimen name="product_item_quantity_TextSize">17sp</dimen>
+    <dimen name="product_item_price_TextSize">20sp</dimen>
+</resources>

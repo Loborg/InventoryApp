@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">InventoryApp</string>
+
+    <string name="header_title">Inventory</string>
+
+    <string name="base_productName">Product Name</string>
+    <string name="base_quantityLabel">Quantity:</string>
+    <string name="base_quantityNumber">13</string>
+    <string name="pieceHint">Piece</string>
+    <string name="base_price">$10.99</string>
+    <string name="priceHint">Price</string>
+    <string name="quantityHint">0</string>
+    <string name="base_suplierName">Suplier Name</string>
+    <string name="base_phoneNumber">+36300000001</string>
+    <string name="phoneHint">Phone Number</string>
+
+    <string name="alreadyAdd">You are already adding a record</string>
+
+    <string name="uri_error_message">Cannot query unknown URI</string>
+
+    <string name="empty_instruction">Press the Add button to add a new product to the inventory!</string>
+
+    <string name="negative_prompt">You can not set negative quantity!</string>
+
+    <string name="default_quantityVolume">1</string>
+
+    <string name="deleteDialog_recordMessage">Do you really went to delete the selected record?</string>
+    <string name="deleteDialog_allMessage">Do you really went to delete all of the record from the inventory?</string>
+    <string name="deleteDialog_positive">Delete</string>
+    <string name="deleteDialog_negative">Cancel</string>
+
+    <string name="menuItem_add">Add new record</string>
+    <string name="menuItem_delet">Delete all records</string>
+
 </resources>

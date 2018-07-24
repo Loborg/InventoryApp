@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="@dimen/add_edit_w"
+        android:layout_height="@dimen/common_h"
+        android:layout_marginStart="@dimen/baseMarginPaddigng"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:srcCompat="@drawable/edit" />
+
+    <ImageView
+        android:id="@+id/detail_cancel"
+        android:layout_width="@dimen/x_plus_minus_h_w"
+        android:layout_height="@dimen/x_plus_minus_h_w"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:srcCompat="@drawable/x" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/commonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <TextView
+        android:id="@+id/detail_productName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        android:layout_marginStart="@dimen/baseMarginPaddigng"
+        android:layout_marginTop="@dimen/baseMarginPaddigng"
+        android:textColor="@color/productName"
+        android:textSize="@dimen/product_item_producName_TextSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        tools:text="@string/base_productName" />
+
+    <TextView
+        android:id="@+id/detail_price"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/baseMarginPaddigng"
+        android:gravity="end"
+        android:textColor="@color/price"
+        android:textSize="@dimen/product_item_price_TextSize"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/detail_productName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/base_price" />
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/commonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_productName" />
+
+    <TextView
+        android:id="@+id/quantityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/quantity"
+        android:textSize="@dimen/product_item_quantity_TextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_2"
+        android:text="@string/base_quantityLabel" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="@color/quantity"
+        android:textSize="@dimen/product_item_quantity_TextSize"
+        app:layout_constraintBottom_toBottomOf="@+id/quantityLabel"
+        app:layout_constraintEnd_toEndOf="@+id/detail_productName"
+        app:layout_constraintStart_toEndOf="@+id/quantityLabel"
+        app:layout_constraintTop_toTopOf="@+id/quantityLabel"
+        tools:text="@string/base_quantityNumber" />
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/baseMarginPaddigng"
+        android:background="@color/commonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quantityLabel" />
+
+    <ImageView
+        android:id="@+id/detail_plus"
+        android:layout_width="@dimen/x_plus_minus_h_w"
+        android:layout_height="@dimen/x_plus_minus_h_w"
+        android:layout_marginEnd="@dimen/plus_minus_gep"
+        app:layout_constraintBottom_toBottomOf="@+id/quantity"
+        app:layout_constraintEnd_toStartOf="@+id/detail_minus"
+        app:layout_constraintTop_toTopOf="@+id/quantity"
+        app:srcCompat="@drawable/plus" />
+
+    <ImageView
+        android:id="@+id/detail_minus"
+        android:layout_width="@dimen/x_plus_minus_h_w"
+        android:layout_height="@dimen/x_plus_minus_h_w"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        app:layout_constraintBottom_toBottomOf="@+id/quantityLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/quantityLabel"
+        app:srcCompat="@drawable/minus"/>
+
+    <TextView
+        android:id="@+id/details_suplierName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        android:layout_marginStart="@dimen/baseMarginPaddigng"
+        android:layout_marginTop="@dimen/baseMarginPaddigng"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_3"
+        tools:text="@string/base_suplierName"
+        android:textColor="@color/commonColor"
+        android:textSize="@dimen/product_item_price_TextSize"/>
+
+    <View
+        android:id="@+id/line_4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/baseMarginPaddigng"
+        android:background="@color/commonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_suplierName" />
+
+    <TextView
+        android:id="@+id/detail_phoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        android:layout_marginStart="@dimen/baseMarginPaddigng"
+        app:layout_constraintBottom_toBottomOf="@+id/details_suplierName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/details_suplierName"
+        tools:text="@string/base_phoneNumber"
+        android:gravity="end"
+        android:textColor="@color/commonColor"
+        android:textSize="@dimen/product_item_price_TextSize"
+        android:background="@drawable/phone_border"
+        android:paddingEnd="@dimen/phone_number_padding"
+        android:paddingStart="@dimen/phone_number_padding"/>
+
+    <ImageView
+        android:id="@+id/detail_delete"
+        android:layout_width="@dimen/sale_w"
+        android:layout_height="@dimen/common_h"
+        android:layout_marginStart="@dimen/baseMarginPaddigng"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toEndOf="@+id/edit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/delete_v2" />
+
+    <EditText
+        android:id="@+id/quantityVolume"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        android:layout_marginStart="@dimen/main_header_padding_margin"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/quantity"
+        app:layout_constraintEnd_toStartOf="@+id/detail_plus"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/quantity"
+        android:text="@string/default_quantityVolume"
+        android:gravity="right"/>
+
+</android.support.constraint.ConstraintLayout>

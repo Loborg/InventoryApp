@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="commonColor">#707070</color>
+
+    <color name="productName">#000000</color>
+    <color name="quantity">#078714</color>
+    <color name="price">#0011FF</color>
 </resources>
