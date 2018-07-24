@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/add"
+        android:layout_width="@dimen/add_edit_w"
+        android:layout_height="@dimen/common_h"
+        android:layout_marginStart="@dimen/baseMarginPaddigng"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:srcCompat="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/add_cancel"
+        android:layout_width="@dimen/x_plus_minus_h_w"
+        android:layout_height="@dimen/x_plus_minus_h_w"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:srcCompat="@drawable/x" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/commonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <EditText
+        android:id="@+id/add_productName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        android:layout_marginStart="@dimen/baseMarginPaddigng"
+        android:layout_marginTop="@dimen/baseMarginPaddigng"
+        android:textColor="@color/productName"
+        android:textSize="@dimen/product_item_producName_TextSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        android:inputType="text"
+        android:hint="@string/base_productName"/>
+
+    <EditText
+        android:id="@+id/add_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        android:layout_marginStart="@dimen/baseMarginPaddigng"
+        android:layout_marginTop="@dimen/baseMarginPaddigng"
+        android:gravity="end"
+        android:textColor="@color/price"
+        android:textSize="@dimen/product_item_price_TextSize"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/add_productName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_productName"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        android:hint="@string/priceHint"
+        android:inputType="numberDecimal" />
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/commonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_productName" />
+
+    <TextView
+        android:id="@+id/quantityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/quantity"
+        android:textSize="@dimen/product_item_quantity_TextSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_2"
+        android:text="@string/base_quantityLabel" />
+
+    <EditText
+        android:id="@+id/add_quantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="@color/quantity"
+        android:textSize="@dimen/product_item_quantity_TextSize"
+        app:layout_constraintBottom_toBottomOf="@+id/quantityLabel"
+        app:layout_constraintEnd_toEndOf="@+id/add_productName"
+        app:layout_constraintStart_toEndOf="@+id/quantityLabel"
+        app:layout_constraintTop_toTopOf="@+id/quantityLabel"
+        android:hint="@string/quantityHint"
+        android:inputType="number" />
+
+    <View
+        android:id="@+id/line_3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/baseMarginPaddigng"
+        android:background="@color/commonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quantityLabel" />
+
+    <ImageView
+        android:id="@+id/add_plus"
+        android:layout_width="@dimen/x_plus_minus_h_w"
+        android:layout_height="@dimen/x_plus_minus_h_w"
+        android:layout_marginEnd="@dimen/plus_minus_gep"
+        app:layout_constraintBottom_toBottomOf="@+id/add_quantity"
+        app:layout_constraintEnd_toStartOf="@+id/add_minus"
+        app:layout_constraintTop_toTopOf="@+id/add_quantity"
+        app:srcCompat="@drawable/plus"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/add_minus"
+        android:layout_width="@dimen/x_plus_minus_h_w"
+        android:layout_height="@dimen/x_plus_minus_h_w"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        app:layout_constraintBottom_toBottomOf="@+id/quantityLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/quantityLabel"
+        app:srcCompat="@drawable/minus"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:id="@+id/add_suplierName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        android:layout_marginStart="@dimen/baseMarginPaddigng"
+        android:layout_marginTop="@dimen/baseMarginPaddigng"
+        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_3"
+        android:textColor="@color/commonColor"
+        android:textSize="@dimen/product_item_price_TextSize"
+        android:inputType="text"
+        android:hint="@string/base_suplierName"/>
+
+    <View
+        android:id="@+id/line_4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/baseMarginPaddigng"
+        android:background="@color/commonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_suplierName" />
+
+    <EditText
+        android:id="@+id/add_supplierPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/baseMarginPaddigng"
+        android:layout_marginStart="@dimen/baseMarginPaddigng"
+        app:layout_constraintBottom_toBottomOf="@+id/add_suplierName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/add_suplierName"
+        android:hint="@string/phoneHint"
+        android:gravity="end"
+        android:textColor="@color/commonColor"
+        android:textSize="@dimen/product_item_price_TextSize"
+        android:background="@drawable/phone_border"
+        android:padding="@dimen/phone_number_padding"
+        android:inputType="phone" />
+
+</android.support.constraint.ConstraintLayout>
