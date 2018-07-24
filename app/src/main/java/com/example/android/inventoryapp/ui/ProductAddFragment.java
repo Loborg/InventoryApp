@@ -197,7 +197,6 @@ public class ProductAddFragment extends Fragment implements LoaderManager.Loader
             vSupplierName.setText(data.getString(sNameIndex));
             vSupplierPhone.setText(String.valueOf(data.getLong(sPhoneIndex)));
         }
-
     }
 
     @Override

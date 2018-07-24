@@ -102,13 +102,6 @@ public class InventoryProvider extends ContentProvider {
 
     private Uri insertProduct(Uri uri, ContentValues values){
 
-        String name = values.getAsString(Product.PRODUCT_NAME);
-        Float price = values.getAsFloat(Product.PRODUCT_PRICE);
-        Integer quantity = values.getAsInteger(Product.PRODUCT_QUANTITY);
-        String supplierName = values.getAsString(Product.SUPLIER_NAME);
-        Integer supplierPhone = values.getAsInteger(Product.SUPLIER_PHONE);
-
-
         SQLiteDatabase database = dbHelper.getWritableDatabase();
         long id = database.insert(Product.TABLE_NAME, null, values);
         getContext().getContentResolver().notifyChange(uri, null);
